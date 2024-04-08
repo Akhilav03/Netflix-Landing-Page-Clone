@@ -1,1 +1,155 @@
-ht
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <header class="header">
+        <a class="header_logo" href="#">
+            <img src="./IMG/netflix-logo.png" alt="">
+        </a>
+        <a class="sign_in_btn primary-btn" href="#">
+            Sign in
+        </a>
+    </header>
+
+
+    <section class="banner_section">
+        <img class="banner" src="./IMG/bg.jpg" alt="">
+        <div class="banner_overlay"> </div>
+        <div class="banner_content">
+            <h1 class="banner_title"><b>Unlimited films, TV programmes and more</b></h1>
+            <h2 class="banner_subtitle">Watch anywhere. Cancel at any time.</h2>
+            <h3 class="form_cta">
+                Ready to watch? Enter your email to create or restart your membership.
+            </h3>
+            <form class="membership_form">
+                <div class="membership_input_container">
+                    <input type="email" class="membership_input">
+                    <label class="membership_placeholder" for="email">Email</label>
+                </div>
+                <label class="membership_input_message"></label>
+
+                <button class="membership_btn primary-btn" type="submit">
+                    Get Started >
+                </button>
+            </form>
+        </div>
+    </section>
+
+
+    <hr class="section_divider" />
+    <div class="story_card_container">
+		<section class="story_card">
+			<div class="story_card_left">
+				<h1>Enjoy on your TV</h1>
+
+				<h2>
+					Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+				</h2>
+			</div>
+
+			<div class="story_card_right">
+				<div class="tv_anime_container">
+					<img class="tv_img" src="./IMG/tv.png" alt="" />
+
+					<video
+                    	autoplay
+						muted
+						loop
+						class="tv_anime"
+						src="./IMG/video-tv-0819.m4v"
+					></video>
+				</div>
+			</div>
+        </section>
+    </div>
+
+
+    <hr class="section_divider" />
+    <div class="story_card_container">
+		<section class="story_card">
+			<div class="story_card_left">
+				<div class="tv_anime_container">
+					<img class="tv_img" src="./IMG/device-pile.png" alt="" />
+
+					<video
+                    	autoplay
+						muted
+						loop
+						class="tv_anime_2"
+						src="./IMG/1.mp4"
+					></video>
+				</div>
+			</div>
+
+			<div class="story_card_right">
+                <h1>Watch everywhere</h1>
+
+				<h2>
+					Stream unlimited films and TV <br>
+                    programmes on your phone, tablet, laptop <br>
+                    and TV.
+				</h2>
+			</div>
+        </section>
+    </div>
+        
+
+    <hr class="section_divider" />
+    <div class="story_card_container">
+		<section class="story_card">
+			<div class="story_card_left">
+				<h1>Create profiles for children</h1>
+
+				<h2>
+					Send children on adventures with their favourite characters in a space made just for them – free with your membership.
+				</h2>
+			</div>
+
+			<div class="story_card_right">
+				<div class="tv_anime_container">
+					<img class="tv_img" src="./IMG/chld.png" alt="" />
+				</div>
+			</div>
+        </section>
+    </div>
+
+
+    <hr class="section_divider" />
+    <div class="story_card_container">
+		<section class="story_card">
+			<div class="story_card_left">
+				<div class="download_container">
+					<img src="./IMG/mobile.jpg" alt="" />
+				</div>
+                <div class="download_animation_container">
+                    <img class="poster" src="./IMG/boxshot.png" alt="" />
+
+                    <div class="text_container">
+                        <p class="title">Stranger <br>Things</p>
+                        <p class="downloading">Downloading...</p>
+                    </div>
+
+                    <img src="./IMG/download-icon.gif" class="download_gif" alt="" />
+                </div>
+			</div>
+
+			 <div class="story_card_right">
+                <h1>Download your programmes <br>to watch offline</h1>
+
+				<h3>
+					Watch on a plane, train or submarine...
+				</h3>
+			</div>
+        </section>
+    </div>
+
+
+    <script src="./main.js"></script>
+    
+</body>
+</html>
