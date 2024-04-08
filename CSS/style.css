@@ -441,9 +441,47 @@ button{
     margin-left:5rem;
 
 }
+.footer {
+	padding: 8rem 6rem 4rem;
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1000px;
+}
 
-.membership_input_container.on-focus .membership_placeholder {
-    top: 1rem;
-    font-size: 1rem;
-    transition: all 0.3s ease; 
+.lst{
+    font-size: 1.6rem;
+	color: #c7c7bd;
+	text-transform: capitalize;
+    font-weight: 600;
+}
+
+.footer_link_container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2rem;
+}
+
+.footer_link {
+	font-size: 1.6rem;
+	color: #c7c7bd;
+	text-transform: capitalize;
+    font-weight: 400;
+}
+
+.footer_link:hover {
+	text-decoration: underline;
+}
+
+.footer_link.contact-link {
+	display: inline-block;
+	margin: 3rem 0;
+}
+
+.fnl{
+    padding-top: 7rem;
+    text-align: center;
+    font-size: 1.3rem;
+	color: #a0a09a;
+	text-transform: capitalize;
+    margin-bottom: -2rem;
 }
