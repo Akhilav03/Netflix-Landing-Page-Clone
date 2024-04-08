@@ -4,35 +4,58 @@ const membershipInputContainer = document.querySelector('.membership_input_conta
 const membershipInputLabel = document.querySelector('.membership_placeholder');
 const membershipInputMessage = document.querySelector('.membership_input_message');
 
-const ON_FOCUS = 'on-focus'; // This class is added/removed to/from the input container on focus/blur
+const accordionQuestionEls = document.querySelectorAll('.accordion_question')
 
-// Email validation function using regex
+const ON_FOCUS = 'on-focus'; 
+
+
 const validateEmail = (email) => {
     return /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
 }
 
-// Handle input focus in
+
 const handleFocusIn = () => {
     membershipInputContainer.classList.add(ON_FOCUS);
 };
 
-// Handle input focus out and validate email
+
 const handleFocusOut = () => {
     membershipInputContainer.classList.remove(ON_FOCUS);
     const isValid = validateEmail(membershipInput.value);
-    membershipInputMessage.textContent = isValid ? '' : 'Invalid Email'; // Show error message if invalid
+    membershipInputMessage.textContent = isValid ? '' : 'Invalid Email'; 
 };
 
-// Adding event listeners for focus and blur events
+
 membershipInput.addEventListener('focus', handleFocusIn);
 membershipInput.addEventListener('blur', handleFocusOut);
 
-// Form submission event handler
+
 membershipForm.addEventListener('submit', (event) => {
     const email = membershipInput.value;
     if (!validateEmail(email)) {
-        event.preventDefault(); // Prevent form submission
-        membershipInputMessage.textContent = 'Please enter a valid email address.'; // Show error message
+        event.preventDefault(); 
+        membershipInputMessage.textContent = 'Please enter a valid email address.'; 
     }
 });
+
+
+accordionQuestionEls.forEach((question) => {
+    question.addEventListener('click', () => {
+
+        const isActive = question.parentElement.classList.contains('active');
+
+        accordionQuestionEls.forEach((el) => {
+            el.parentElement.classList.remove('active');
+            el.nextElementSibling.style.maxHeight = null; 
+        });
+
+        if (!isActive) {
+            question.parentElement.classList.add('active');
+            const panel = question.nextElementSibling;
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+});
+
+
 
