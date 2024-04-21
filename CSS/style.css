@@ -433,12 +433,11 @@ button{
 }
 
 .final_content{
-    left: 60%;
     width: 100%;
     max-width: 1100px;
     text-align:center;
     margin-top:-5rem;
-    margin-left:5rem;
+    margin-left:40rem;
 
 }
 .footer {
